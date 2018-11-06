@@ -33,3 +33,6 @@ Or you can download it directly from
 ```
 https://github.com/Tony607/Keras_age_gender/releases/download/V1.0/weights.18-4.06.hdf5
 ```
+
+## Run the run.sh
+This file when run with 'sh run.sh' will download python 3.5.6 using pyenv and install the requirements/dependencies. Make sure pyenv is installed before running this script.

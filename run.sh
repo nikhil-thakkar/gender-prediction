@@ -1,8 +1,8 @@
-
+#!/bin/bash
 
 echo 'setting up python environment and installing other dependencies!';
 
-echo 'installing python 3.5';
+echo 'installing python 3.5.6';
 pyenv install 3.5.6;
 pyenv local 3.5.6;
 pip install -r requirements.txt;
