@@ -13,8 +13,8 @@ from keras.utils.data_utils import get_file
 detectorWindow = 'Keras Faces'
 # Load an color image in grayscale
 product = 'gillette'
-male = cv2.imread('./products/{}/man.jpg'.format(product))
-female = cv2.imread('./products/{}}/female.jpg'.format(product))
+male = cv2.imread('./products/{}/men.jpg'.format(product))
+female = cv2.imread('./products/{}}/women.jpg'.format(product))
 neutral = cv2.imread('./products/{}/neutral.png').format(product))
 cv2.namedWindow(detectorWindow, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(detectorWindow, 1280,1080)
