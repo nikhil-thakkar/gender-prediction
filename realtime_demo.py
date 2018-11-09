@@ -14,8 +14,8 @@ detectorWindow = 'Keras Faces'
 # Load an color image in grayscale
 product = 'gillette'
 male = cv2.imread('./products/{}/men.jpg'.format(product))
-female = cv2.imread('./products/{}}/women.jpg'.format(product))
-neutral = cv2.imread('./products/{}/neutral.png').format(product))
+female = cv2.imread('./products/{}/women.jpg'.format(product))
+neutral = cv2.imread('./products/{}/neutral.jpg'.format(product))
 cv2.namedWindow(detectorWindow, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(detectorWindow, 1280,1080)
 
@@ -88,7 +88,7 @@ class FaceCV(object):
 
     def detect_face(self):
         # 0 means the default video capture device in OS
-        cv2.imshow(detectorWindow, neutral)
+        #cv2.imshow(detectorWindow, neutral)
         while True:
             female_count , male_count = self.getCurrentFaces()
             if female_count > 0 and male_count > 0:
@@ -100,13 +100,13 @@ class FaceCV(object):
             elif male_count == 0 and female_count > 0:
                 # show male advert
                 cv2.imshow(detectorWindow, female)
-            else:
+            #else:
                 # no face found
                 # show neutral advert
-                cv2.imshow(detectorWindow, neutral)
+                #cv2.imshow(detectorWindow, neutral)
 
             cv2.waitKey(delayInMillis)
-            cv2.imshow(detectorWindow, neutral)
+            #cv2.imshow(detectorWindow, neutral)
             sleep(delay)
             
             # cv2.imshow(detectorWindow, frame)
