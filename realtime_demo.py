@@ -12,13 +12,14 @@ from keras.utils.data_utils import get_file
 
 detectorWindow = 'Keras Faces'
 # Load an color image in grayscale
-male = cv2.imread('./products/m.jpeg')
-female = cv2.imread('./products/f.jpeg')
-neutral = cv2.imread('./products/n.png')
+product = 'gillette'
+male = cv2.imread('./products/{}/man.jpg'.format(product))
+female = cv2.imread('./products/{}}/female.jpg'.format(product))
+neutral = cv2.imread('./products/{}/neutral.png').format(product))
 cv2.namedWindow(detectorWindow, cv2.WINDOW_NORMAL)
 cv2.resizeWindow(detectorWindow, 1280,1080)
 
-delay = 5
+delay = 2
 delayInMillis = delay * 1000
 
 class FaceCV(object):
